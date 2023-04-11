@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="whoPlayFirst"
+            type="Boolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_bigger"
+            android:layout_marginEnd="@dimen/margin_mid"
+            android:layout_marginBottom="@dimen/margin_bigger"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_bigger"
+                android:layout_marginRight="@dimen/margin_bigger"
+                android:contentDescription="@string/person"
+                android:src="@drawable/ic_baseline_group_24"
+                app:tint="@color/text" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:text="@string/who_play_first"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_size_mid" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:layout_toStartOf="@+id/whoPlayFirstSwitch"
+                    android:text="@string/x"
+                    android:textSize="20sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/whoPlayFirstSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toStartOf="@+id/whoPlayFirst0"
+                    android:checked="@{whoPlayFirst}"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_vertical"
+                    android:theme="@style/SCBSwitch" />
+
+                <TextView
+                    android:id="@+id/whoPlayFirst0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/_0"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

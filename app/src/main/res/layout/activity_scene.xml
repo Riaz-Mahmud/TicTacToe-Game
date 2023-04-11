@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/bg_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.Scene">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/bg_white"
+            android:gravity="center"
+            tools:context=".activities.Scene">
+
+            <include layout="@layout/scene_score_board"
+                android:id="@+id/scene_score_board"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginStart="@dimen/card_margin_left"
+                android:layout_marginEnd="@dimen/card_margin_left"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/padding_smallest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                app:cardCornerRadius="@dimen/padding_mid"
+                app:cardElevation="@dimen/padding_mid">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:padding="@dimen/padding_mid"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.oyegbite.tictactoe.ticTacToe.TicTacToeBoard
+                        android:id="@+id/tic_tac_toe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        custom:boardColor="@color/text_hint"
+                        custom:boardDimension="3"
+                        custom:oColor="@color/neon_green"
+                        custom:xColor="@color/neon_pink"
+                        />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <include
+                layout="@layout/game_over_board"
+                android:id="@+id/game_over_board"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>
