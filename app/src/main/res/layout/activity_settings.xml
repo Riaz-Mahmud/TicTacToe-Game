@@ -47,7 +47,6 @@
         </LinearLayout>
 
         <include layout="@layout/settings_difficulty_level"
-            android:visibility="gone"
             android:id="@+id/difficulty_level_layout"/>
 
         <include layout="@layout/settings_number_of_player"
@@ -55,10 +54,6 @@
 
         <include layout="@layout/settings_who_play_first"
             android:id="@+id/whoPlayFirst_layout"/>
-
-        <include layout="@layout/settings_board_size"
-            android:visibility="gone"
-            android:id="@+id/board_size_layout"/>
 
     </LinearLayout>
 </layout>

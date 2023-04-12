@@ -29,7 +29,7 @@
                 android:layout_marginLeft="@dimen/margin_bigger"
                 android:layout_marginRight="@dimen/margin_bigger"
                 android:contentDescription="@string/person"
-                android:src="@drawable/ic_baseline_group_24"
+                android:src="@drawable/ic_baseline_person_24"
                 app:tint="@color/text" />
 
             <RelativeLayout
@@ -78,6 +78,9 @@
                     android:textSize="20sp" />
 
             </RelativeLayout>
+
         </LinearLayout>
+
     </LinearLayout>
+
 </layout>

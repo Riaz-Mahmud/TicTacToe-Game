@@ -9,7 +9,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.oyegbite.tictactoe"
+        applicationId "com.backdoor.tictactoe"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -34,7 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace 'com.oyegbite.tictactoe'
+    namespace 'com.backdoor.tictactoe'
     buildFeatures {
         viewBinding true
     }
